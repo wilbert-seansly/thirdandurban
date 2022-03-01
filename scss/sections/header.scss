@@ -1,0 +1,149 @@
+.menu--open {
+  height: 100%;
+  overflow: hidden;
+}
+
+#masthead {
+  background: $orange;
+  // height: 12rem;
+  position: absolute;
+  z-index: 999;
+  // padding: $padding;
+  width: 100%;
+  height: 12px;
+}
+#masthead .wrap {
+  position: relative;
+  max-width: $content-width;
+  margin: 0 auto;
+}
+#masthead .site-branding {
+  padding: 2rem 30px;
+
+  #svg-logo-white {
+    padding-top: 20px;
+    @media screen and (max-width: 320px) {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 48em) {
+    padding: 4rem 5rem;
+  }
+}
+
+.site-header__stalker {
+  height: 50px;
+  background: rgb(232, 72, 36);
+  padding: 8px 0;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  // max-width: $content-width;
+  margin: 0 auto;
+  box-sizing: border-box;
+  z-index: 1001;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+
+  a:hover {
+    opacity: .8;
+  }
+
+  .wrap {
+    max-width: $content-width;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.stalking .site-header__stalker {
+  transform: translateY(0);
+  opacity: 1;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+.menu--open .stalking .site-header__stalker #Primary_Logo {
+  pointer-events: none;
+  opacity: 0;
+}
+.site-header__stalker #Primary_Logo {
+  transition: opacity .24s ease;
+  @media screen and (max-width: 320px) {
+    width: 60%;
+  }
+}
+.site-header__stalker svg {
+  width: 200px;
+  height: 30px;
+}
+.site-header__cover {
+  // display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  opacity: 0;
+  background: $orange;
+}
+
+#svg-logo-white {}
+#svg-logo-white,
+#svg-logo-white svg {
+  width: 200px;
+  height: 30px;
+}
+#svg-logo-white--lg {}
+#svg-logo-white--lg,
+#svg-logo-white--lg svg {
+  opacity: .9;
+  width: 200px;
+  height: 225px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+html.menu--open {
+  .site-header__cover {
+    height: 100vh;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+  }
+}
+
+html.menu--close {
+  .site-header__cover {
+    height: 0;
+    opacity: 0;
+    transition: height 0 0.5s  linear,
+                opacity 0.5s ease-out;
+  }
+}
+
+#content > .page-header {
+  background: url(assets/images/hero.jpg) no-repeat center 50%;
+  background-size: cover;
+  height: 300px;
+}
+
+/* Just a quick fix to make standard pages at least workable */
+.site-main {
+  background: #fff;
+  max-width: 100%;
+  padding: 5% 20%;
+  text-align: center;
+}
+.home .site-main {
+  text-align: left;
+  padding: 0;
+  max-width: none;
+  background: inherit;
+}
+
+#fp-section1, #fp-section1 .section {
+  min-height: 520px;
+}

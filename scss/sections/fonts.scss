@@ -1,0 +1,13 @@
+// @import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+
+$poppins: Raleway, sans-serif;
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $poppins;
+  font-size: 1.6rem;
+  font-weight: 300;
+}

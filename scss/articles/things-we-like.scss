@@ -1,0 +1,206 @@
+#fp-things-that-inspire-us {
+  background: #3f5e76;
+}
+
+#post-things-that-inspire-us {
+  h1 {
+    position: absolute;
+    color: #fff;
+    z-index: 9;
+    text-transform: uppercase;
+    pointer-events: none;
+    font-size: 80px;
+    top: 5%;
+    left: 5%;
+    text-shadow: 0 0 10px rgba(0,0,0,.75);
+    transition: opacity .35s ease, transform .4s ease-in-out;
+    transform: translateX(0);
+    @media screen and (max-width: 1100px) {
+      font-size: 70px;
+    }
+    @media screen and (max-width: 900px) {
+      font-size: 50px;
+    }
+    @media screen and (max-width: 468px) {
+      font-size: 30px;
+    }
+  }
+
+  &.hideh1 h1 {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+
+  background: #3f5e76;
+  min-height: 500px;
+  @media screen and (max-width: 768px) {
+    min-height: 0;
+    height: auto;
+  }
+
+  .panel-content {
+    height: 100%;
+  }
+
+  .wrap {
+    max-width: 100%;
+    padding: 0;
+    height: 100%;
+    position: relative;
+    &:after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+  }
+
+  .img-grid {
+    position: relative;
+  }
+
+  .title {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,5,.75);
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 5px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    transition: opacity .35s ease;
+    @media screen and (max-width: 900px) {
+      font-size: 16px;
+    }
+  }
+
+  .image {
+    transition: filter .5s ease;
+  }
+
+  .image:hover {
+    filter: grayscale(70%);
+    .title {
+      opacity: 1;
+    }
+  }
+
+}
+
+.block-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.site-gallery {
+  @media all and (min-width: 400px) {
+		display: grid;
+	  grid-gap: 0;
+		grid-template-columns: auto auto auto;
+	  grid-template-rows: auto auto auto;
+		width: calc(100% + 10px);
+		margin: -5px -5px;
+		height: 100%;
+  }
+	@media all and (min-width: 769px) {
+		grid-template-columns: auto auto auto auto;
+	  grid-template-rows: auto auto auto auto;
+	}
+	.image {
+    background-size: cover;
+    background-position: center;
+		@media all and (min-width: 400px) {
+			grid-column-end: span 1;
+			width: 100%;
+			height: 25vh;
+			position: relative;
+		}
+	}
+	a {
+		display: block;
+		z-index: 5;
+		position: relative;
+		height: 100%;
+		width: 100%;
+		&:hover {
+			img,
+			.image-bg {
+				opacity: .85;
+			}
+			.image-bg {
+				opacity: 1;
+			}
+		}
+	}
+	.image-bg,
+	img {
+		display: block;
+		margin-top: 5px;
+		@media all and (min-width: 400px) {
+			margin: 0;
+			object-fit: cover;
+			width: calc(100% - 10px);
+			height: calc(100% - 10px);
+			position: absolute;
+			top: 5px;
+			left: 5px;
+		}
+		transition: transform .25s ease, opacity .25s ease;
+		z-index: 1;
+	}
+	.image-bg {
+		background-color: #000;
+		z-index: 0;
+	}
+  .image {
+    @media all and (max-width: 401px) {
+      height: 50vw;
+    }
+  }
+  @media all and (min-width: 400px) and (max-width: 768px) {
+    .grid-1 {
+      grid-row-end: span 2;
+      grid-column-end: span 2;
+      height: 50vh;
+    }
+    .grid-3 {
+      grid-row-end: span 2;
+      height: 50vh;
+    }
+    .grid-6 {
+      grid-column-end: span 2;
+    }
+    .grid-9 {
+      grid-column-end: span 2;
+    }
+  }
+  @media all and (min-width: 769px) {
+    .grid-1 {
+      grid-row-end: span 2;
+      height: 50vh;
+    }
+    .grid-3 {
+      grid-row-end: span 3;
+      height: 75vh;
+    }
+    .grid-6 {
+      grid-row-end: span 2;
+      height: 50vh;
+    }
+    .grid-7 {
+      grid-row-end: span 2;
+      grid-column-end: span 2;
+      height: 50vh;
+    }
+	}
+}

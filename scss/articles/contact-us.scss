@@ -1,0 +1,157 @@
+#post-contact-us {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  background: url(assets/images/bg-footer-back.jpg) no-repeat center fixed;
+  background-size: cover;
+  display: flex;
+  height: 700px;
+
+  .entry-title {
+    display: none;
+  }
+
+  .panel-content {
+    background: #333;
+    position: relative;
+    width: 100%;
+    z-index: 9;
+    overflow: hidden;
+  }
+
+  a[href^="tel:"] {
+    text-decoration: none;
+  }
+
+  .entry-content {
+    padding-top: 20vh;
+  }
+
+  .wrap {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 4rem;
+    text-align: center;
+  }
+
+  a {
+    color: #fff;
+  }
+
+  @media screen and (min-width: 768px) {
+    .wrap {
+      max-width: 50%;
+      float: left;
+    }
+    .panel-content {
+      background: url(assets/images/bg-footer2.png) no-repeat center;
+      background-size: 100%;
+    }
+  }
+
+}
+
+#post-contact-us form p:after {
+  content: ' ';
+  display: table;
+  clear: both;
+}
+
+#post-contact-us input,
+#post-contact-us textarea {
+  background: #eee;
+  border: none;
+  padding: 0.5rem;
+  color: #333;
+  font-size: 1.5rem;
+  display: block;
+  width: 100%;
+
+  &::placeholder {
+    color: rgba(0,0,0,0.85);
+  }
+}
+#post-contact-us input[type="submit"] {
+  padding: 1rem;
+  text-transform: uppercase;
+  float: right;
+  max-width: 15rem;
+  background: #e74b25;
+  cursor: pointer;
+  color: #fff;
+}
+
+
+#post-contact-us .wpcf7-mail-sent-ok,
+#post-contact-us .wpcf7-mail-sent-ng {
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border: none;
+  background: $green;
+  color: $white;
+}
+#post-contact-us .wpcf7-mail-sent-ng {
+  background: $red;
+}
+
+#post-contact-us form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    width: 100%;
+    display: block;
+  }
+
+  textarea {
+    height: 13rem;
+  }
+
+
+  p {
+    padding-right: 2rem;
+    width: 50%;
+  }
+
+  p:nth-child(6) {
+    flex-grow: 2;
+    flex-basis: 100%;
+  }
+  p:nth-child(7) {
+    flex-grow: 2;
+  }
+}
+
+#post-contact-us .site-info {
+  color: #fff;
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    bottom: 40px;
+    width: calc(50% - 80px);
+  }
+}
+
+.ie #post-contact-us .panel-content {
+  form {
+    overflow: hidden;
+  }
+  textarea {
+    width: calc(100% - 2rem);
+  }
+}
+
+@media screen and (max-width: 48em) {
+  #fp-contact-us,
+  #post-contact-us,
+  #post-contact-us .panel-content {
+    min-height: 0;
+    height: auto;
+    .entry-content {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+}

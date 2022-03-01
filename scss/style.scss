@@ -1,0 +1,37 @@
+// gulp sass:watch
+/**
+ * Theme Name: Third and Urban
+ * Author: Brandshake Creative
+ * Description: Site developed for exclusive use by Third and Urban.
+ * Version: 1.0
+ * Text Domain: thirdurban
+ *
+ */
+
+@import "base/variables";
+@import "base/normalize";
+
+@import "sections/fonts";
+@import "sections/base";
+@import "sections/accessibility";
+
+@import "sections/header";
+@import "sections/nav";
+
+@import "plugins/owl-carousel.min";
+
+@import "sections/articles";
+@import "articles/intro";
+@import "articles/about";
+@import "articles/who-we-are";
+@import "articles/where-we-work";
+@import "articles/how-we-think";
+@import "articles/our-work";
+@import "articles/what-we-like";
+@import "articles/things-that-inspire-us";
+@import "articles/contact-us";
+@import "articles/news-and-press";
+
+@import "sections/footer";
+
+@import "plugins/magpopup";

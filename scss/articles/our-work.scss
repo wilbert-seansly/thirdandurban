@@ -1,0 +1,221 @@
+#post-our-work {
+  .entry-title {
+    display: none;
+  }
+  background-size:cover;
+  background-position: center;
+  background-color: #333333;
+
+  .wrap {
+    width: 94%;
+  }
+
+  .wrap:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+#post-our-work .entry-title {
+}
+#post-our-work .entry-title:after {
+  background-color: $white;
+}
+#post-our-work .post-subpage {
+  position: relative;
+}
+#post-our-work .no-project .subpage-title {
+  display: none;
+}
+#post-our-work .project:hover .subpage-title {
+  opacity: 1;
+  transform: translateY(-50%);
+}
+#post-our-work .project .subpage-title {
+  transition: opacity .25s ease, transform .25s ease;
+  opacity: 0;
+  color: $white;
+  font-size: 24px;
+  text-transform: uppercase;
+  padding: 10px 15px;
+  font-weight: 700;
+  text-shadow: 0 0 2px rgba(0,0,0,.65);
+  position: absolute;
+  background: rgba(0,0,0,.5);
+  top: 50%;
+  transform: translateY(-30%);
+  text-align: center;
+  width: 100%;
+  z-index: 6;
+  pointer-events: none;
+  small {display: block;
+    font-size: 70%;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 18px;
+  }
+}
+
+#post-our-work .subpage-image {
+  padding-top: 25vh;
+  background-position: center center;
+  background-size: cover;
+
+  @media screen and (max-width: 600px) {
+    padding-top: 66%;
+  }
+
+}
+#post-our-work .subpage-image img {
+  display: none;
+}
+
+.post-subpage a.lightbox-w-slider,
+.post-subpage  a.lightbox {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  text-indent: -9999px;
+  z-index: 5;
+  transition: background .5s ease;
+  &:hover {
+    background: rgba(#e74b25,.35)
+  }
+}
+
+#post-our-work .entry-subpages {
+  margin: 0 -2rem;
+  .project {
+    width: 100%;
+    width: calc(100% - 4rem);
+    margin: 2rem;
+    float: left;
+    @media screen and (max-width: 768px) {
+      margin: 1rem;
+      width: calc(100% - 2rem);
+    }
+  }
+}
+
+div.owl-carousel-4x4 {
+  .owl-item {
+    width: 100%;
+    display: block;
+  }
+}
+
+.owl-inner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .fa {
+    font-size: 90px;animation-duration: 2s;
+    animation-iteration-count: 100;
+    animation-name: fadeInRight;
+    color: #e74b25;
+  }
+  background-color: rgba(0,0,0,.15);
+  transition: background .3s ease;
+  &:hover {
+    background-color: rgba(0,0,0,.35);
+  }
+}
+
+.project-nav-when-hidden,
+.project-nav {
+  transition: opacity .25s ease;
+  position: absolute !important;
+  bottom: 0;
+}
+
+.project-nav-when-hidden {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute !important;
+}
+
+.owl-item:not(.active) + .owl-item.active {
+  .project-nav {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute !important;
+  }
+  .project-nav-when-hidden {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative !important;
+  }
+}
+
+#owl-carousel-4x4-nav {
+  &.owl-nav {
+    position: relative;
+    .owl-prev, .owl-next {
+      position: absolute;
+      font-size: 32px;
+      cursor: pointer;
+      i {
+        color: #fff;
+      }
+      &:hover {
+        i {
+          color: #fbc7ad;
+        }
+      }
+      &.disabled {
+        opacity: .35;
+        pointer-events: none;
+      }
+    }
+    .owl-prev {
+      left: 20px;
+    }
+    .owl-next {
+      right: 20px;
+    }
+  }
+}
+
+#post-our-work .panel-content > .wrap {
+  padding-top: 15px;
+}
+
+#owl-carousel-4x4-dots {
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &.owl-dots {
+    text-align: center;
+    .owl-dot {
+      cursor: pointer;
+      display: inline-block;
+      margin: 5px;
+      border: none;
+      appearance: none;
+      background: #fff;
+      height: 5px;
+      width: 24px;
+      transition: background-color .15s ease;
+      &.active {
+        background-color: $orange;
+      }
+      &:hover {
+        background-color: #fbc7ad;
+      }
+    }
+  }
+}
+
+.owl-carousel-4x4 .owl-stage {
+  display: flex;
+}

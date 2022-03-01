@@ -1,0 +1,23 @@
+{
+  "name": "thirdurban",
+  "version": "1.0.0",
+  "description": "=== Twenty Seventeen === Contributors: the WordPress team Requires at least: WordPress 4.7 Tested up to: WordPress 4.7 Version: 1.2 License: GPLv2 or later License URI: http://www.gnu.org/licenses/gpl-2.0.html Tags: one-column, two-columns, right-sidebar, flexible-header, accessibility-ready, custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats, rtl-language-support, sticky-post, theme-options, threaded-comments, translation-ready",
+  "main": "index.js",
+  "scripts": {
+    "gulp": "gulp --gulpfile ./gulpfile.js",
+    "gulp:watch": "gulp --gulpfile ./gulpfile.js sass:watch",
+    "sass": "node-sass --output-style compressed --include-path scss src/scss/style.scss  style.css",
+    "sass:watch": "nodemon -e scss -x 'npm run sass'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^6.4.0",
+    "gulp-sass": "^3.1.0",
+    "node-sass": "^4.5.2",
+    "nodemon": "^1.11.0"
+  }
+}
