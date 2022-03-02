@@ -1,0 +1,109 @@
+/**
+ First Article
+**/
+#third-and-urban {
+  height: 100vh;
+  background: url(assets/images/hero.jpg) no-repeat top center;
+  background-size: cover;
+  color: #333;
+  font-size: 2rem;
+  position: relative;
+  text-shadow: 1px 0 0 rgba(255, 255, 255, 0.75);
+}
+
+#third-and-urban .continue {
+  display: block;
+}
+
+#third-and-urban .panel-content {
+  background: url(assets/images/bg-panel.png) repeat-x top;
+  padding-top: 100px;
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+#third-and-urban .panel-content p {
+  margin: 0;
+}
+
+#third-and-urban .panel-content .entry-header {
+  position: relative;
+}
+
+#third-and-urban .panel-content .entry-header .entry-title {
+  font-family: 'Raleway', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  position: static;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  line-height: 1.25;
+}
+
+#third-and-urban .panel-content .entry-header .entry-title:before {
+  left: 1em;
+}
+
+#third-and-urban .panel-content .entry-header .entry-title:after {
+  right: 1em;
+  left: auto;
+}
+
+@media screen and (max-width: 48em) {
+  #third-and-urban .panel-content .entry-header .entry-title {
+    font-size: 20px;
+  }
+}
+
+#third-and-urban .panel-content .entry-content {
+  padding-top: 0;
+  position: relative;
+  line-height: 1.25;
+  font-weight: 400;
+}
+
+@media screen and (min-width: 468px) {
+  #third-and-urban .panel-content .entry-content {
+    padding: 0.5rem 5rem;
+    font-size: 24px;
+  }
+}
+
+#third-and-urban .panel-content .entry-content em {
+  font-style: normal;
+  color: #e74b25;
+  text-transform: uppercase;
+}
+
+#third-and-urban .panel-content .entry-content p:last-child {
+  margin: 0;
+}
+
+#third-and-urban .panel-content .entry-content .fa {
+  margin-top: 10px;
+  color: #e74b25;
+  font-size: 90px;
+  line-height: 40px;
+  vertical-align: middle;
+}
+
+#third-and-urban .panel-content .entry-content .fa:hover {
+  opacity: 0.8;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@media screen and (max-width: 468px) {
+  #third-and-urban .panel-content .entry-content {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 1080px) {
+  #third-and-urban br {
+    display: none;
+  }
+}
+/*# sourceMappingURL=intro.css.map */

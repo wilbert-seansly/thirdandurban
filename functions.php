@@ -12,7 +12,7 @@
 add_filter('jpeg_quality', function($arg){return 100;});
 
 // Cache buster
-define( 'THEME_VERSION', filemtime( get_stylesheet_directory() . '/style.css' ) );
+define( 'THEME_VERSION', filemtime( get_stylesheet_directory() . '/scss/style.css' ) );
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.

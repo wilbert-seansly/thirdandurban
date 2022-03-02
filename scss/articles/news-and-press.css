@@ -1,0 +1,134 @@
+#post-news-and-press {
+  background: #111 url(assets/images/bg-section7.jpg) no-repeat center center/cover;
+  position: relative;
+}
+
+#post-news-and-press .wrap {
+  z-index: 2;
+  position: relative;
+}
+
+#post-news-and-press:after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: #222;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: opacity .5s ease;
+  transition: opacity .5s ease;
+}
+
+.saw-more #post-news-and-press:after {
+  opacity: 1;
+}
+
+.post-item {
+  background: rgba(255, 255, 255, 0.9);
+  margin: 0 20px;
+}
+
+.post-item .entry-info {
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.post-item .entry-info a {
+  color: #000;
+  text-decoration: none;
+}
+
+.post-item .entry-info .subpage-title {
+  font-size: 18px;
+  line-height: 1.05;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .post-item .entry-info .subpage-title {
+    font-size: 20px;
+  }
+}
+
+.post-item .entry-info .source {
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.post-item .entry-info .source a {
+  color: #e84824;
+}
+
+.post-item .entry-info .source strong {
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+@media screen and (min-width: 600px) {
+  .post-item .entry-info {
+    padding: 20px 30px;
+    font-size: 15px;
+  }
+}
+
+.entry-posts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.entry-posts .post-item {
+  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.65);
+  width: calc(33.33% - 30px);
+  margin: 20px 0;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+  .entry-posts .post-item {
+    max-width: 400px;
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+
+.entry-posts .post-item .subpage-image {
+  background-size: cover;
+  background-position: center;
+}
+
+.entry-posts .post-item .subpage-image img {
+  opacity: 0;
+  width: 100%;
+  display: block;
+}
+
+.see-more {
+  color: #fff;
+  font-weight: 600;
+  font-size: 28px;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 30px 0 0;
+}
+
+.see-more .fa {
+  font-size: 120px;
+  line-height: 50px;
+}
+
+.see-more:hover {
+  opacity: .75;
+}
+/*# sourceMappingURL=news-and-press.css.map */

@@ -19,10 +19,20 @@
   }
   .entry-subpages {
     display: grid;
-	grid-template-columns: 1fr 1fr 1fr 1fr;
+	  grid-template-columns: 1fr;
+    grid-gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 -1rem;
+
+    @media screen and (min-width: 35.5em) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (min-width: 60em) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
   }
 
   .entry-header {
@@ -33,6 +43,7 @@
     $vw: 87vw;
     $ratio: 1.4347826087;
     height: $vw * $ratio;
+    width: 100%;
     position: relative;
     margin: 2rem;
 
@@ -80,6 +91,7 @@
       margin: 0;
       z-index: 7;
       pointer-events: none;
+      background: rgba(251,251,251, 0.7);
     }
   }
 

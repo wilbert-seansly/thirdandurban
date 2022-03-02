@@ -1,0 +1,158 @@
+html.menu--open .navigation-top {
+  height: 100vh;
+  z-index: 1000;
+  overflow: auto;
+}
+
+.navigation-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 0;
+  overflow: hidden;
+}
+
+#top-menu {
+  margin: 0;
+  padding: 20vh 0 0;
+  text-align: center;
+}
+
+#top-menu li {
+  list-style: none;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  opacity: 0;
+  -webkit-transition: opacity .4s ease-out, -webkit-transform 0.4s ease-out;
+  transition: opacity .4s ease-out, -webkit-transform 0.4s ease-out;
+  transition: transform 0.4s ease-out, opacity .4s ease-out;
+  transition: transform 0.4s ease-out, opacity .4s ease-out, -webkit-transform 0.4s ease-out;
+}
+
+html.menu--open #top-menu li {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  opacity: 1;
+}
+
+html.menu--close #top-menu li {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+}
+
+#top-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 2.7rem;
+  font-weight: 300;
+  display: block;
+  padding: 0.4em;
+  text-transform: uppercase;
+}
+
+#top-menu a:hover {
+  background: #da3c15;
+}
+
+/* ## Navicon
+--------------------------------------------- */
+.toggle-menu {
+  font-size: 16px;
+  line-height: 26px;
+  color: #fff;
+  width: 36px;
+  height: 22px;
+  padding: 5px 0 0 0;
+  cursor: pointer;
+  z-index: 3002;
+  position: absolute;
+  right: 30px;
+  top: 10px;
+}
+
+.toggle-menu.site-header__menu {
+  width: 50px;
+  right: 0px;
+  top: 65px;
+}
+
+@media screen and (max-width: 48em) {
+  .toggle-menu.site-header__menu {
+    top: 30px;
+  }
+}
+
+.toggle-menu:hover {
+  opacity: .8;
+}
+
+.toggle-menu .navicon,
+.toggle-menu .navicon:before,
+.toggle-menu .navicon:after {
+  -webkit-transition: background 0s .3s, top .3s .3s, -webkit-transform .3s .1s;
+  transition: background 0s .3s, top .3s .3s, -webkit-transform .3s .1s;
+  transition: background 0s .3s, top .3s .3s, transform .3s .1s;
+  transition: background 0s .3s, top .3s .3s, transform .3s .1s, -webkit-transform .3s .1s;
+}
+
+.toggle-menu .navicon,
+.toggle-menu .navicon:before,
+.toggle-menu .navicon:after {
+  width: 100%;
+  height: 4px;
+  background: #fffcf4;
+  content: "";
+  display: block;
+  position: relative;
+}
+
+.site-header__menu.toggle-menu .navicon,
+.site-header__menu.toggle-menu .navicon:before,
+.site-header__menu.toggle-menu .navicon:after {
+  height: 8px;
+}
+
+.toggle-menu .navicon:before {
+  top: -10px;
+  position: absolute;
+}
+
+.site-header__menu.toggle-menu .navicon:before {
+  top: -15px;
+}
+
+.toggle-menu .navicon:after {
+  top: 10px;
+  position: absolute;
+}
+
+.site-header__menu.toggle-menu .navicon:after {
+  top: 15px;
+}
+
+.menu--open .toggle-menu .navicon:before,
+.menu--open .toggle-menu .navicon:after {
+  -webkit-transition: top .3s .1s, -webkit-transform .3s .3s;
+  transition: top .3s .1s, -webkit-transform .3s .3s;
+  transition: top .3s .1s, transform .3s .3s;
+  transition: top .3s .1s, transform .3s .3s, -webkit-transform .3s .3s;
+}
+
+.menu--open .toggle-menu .navicon {
+  background: none;
+}
+
+.menu--open .toggle-menu .navicon:before {
+  top: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.menu--open .toggle-menu .navicon:after {
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+/*# sourceMappingURL=nav.css.map */
